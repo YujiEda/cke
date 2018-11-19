@@ -195,7 +195,6 @@ func (k KubernetesCA) IssueForScheduler(ctx context.Context, inf Infrastructure)
 			"max_ttl":           "87600h",
 			"enforce_hostnames": "false",
 			"allow_any_name":    "true",
-			"organization":      "system:kube-scheduler",
 		},
 		map[string]interface{}{
 			"common_name":          "system:kube-scheduler",
@@ -211,7 +210,6 @@ func (k KubernetesCA) IssueForControllerManager(ctx context.Context, inf Infrast
 			"max_ttl":           "87600h",
 			"enforce_hostnames": "false",
 			"allow_any_name":    "true",
-			"organization":      "system:kube-controller-manager",
 		},
 		map[string]interface{}{
 			"common_name":          "system:kube-controller-manager",
@@ -251,7 +249,6 @@ func (k KubernetesCA) IssueForProxy(ctx context.Context, inf Infrastructure) (cr
 			"max_ttl":           "87600h",
 			"enforce_hostnames": "false",
 			"allow_any_name":    "true",
-			"organization":      "system:node-proxier",
 		},
 		map[string]interface{}{
 			"common_name":          "system:kube-proxy",
